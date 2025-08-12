@@ -47,10 +47,21 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
+    implementation(libs.junit.ktx)
+    implementation(libs.androidx.espresso.core)
     testImplementation(libs.junit)
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
+    androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
     implementation(libs.gson)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    debugImplementation("androidx.fragment:fragment-testing:1.6.2")
+    androidTestImplementation ("androidx.test:runner:1.5.2")
+    androidTestImplementation ("androidx.test:rules:1.5.0")
+    testImplementation ("org.hamcrest:hamcrest-library:2.2")
+
+
 }

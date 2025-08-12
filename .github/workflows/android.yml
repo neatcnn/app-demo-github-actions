@@ -1,4 +1,4 @@
-# .github/workflows/build.yml
+# .github/workflows/android.yml
 name: Android CI Build
 
 # Controls when the workflow will run
@@ -45,6 +45,9 @@ jobs:
       # Use './gradlew assembleRelease' for a release build (requires signing setup)
       - name: Build with Gradle
         run: ./gradlew assembleDebug # Or ./gradlew build for tests too
+
+      - name: Run Unit Tests
+        run: ./gradlew testDebugUnitTest
 
       # Optional: Upload the built APK as an artifact
       # This allows you to download the APK from the Actions run summary
