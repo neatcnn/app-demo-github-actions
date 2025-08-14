@@ -1,22 +1,21 @@
 package com.example.opsc6312demo1
 
 
+import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import okhttp3.mockwebserver.MockResponse
+import okhttp3.mockwebserver.MockWebServer
+import org.hamcrest.CoreMatchers.allOf
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import okhttp3.mockwebserver.MockWebServer
-import okhttp3.mockwebserver.MockResponse
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.fragment.app.testing.launchFragmentInContainer
-import androidx.test.core.app.ActivityScenario
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import org.hamcrest.CoreMatchers.allOf
 
 
 @RunWith(AndroidJUnit4::class)
@@ -65,6 +64,5 @@ class PostFragment2Test {
         onView(allOf(withId(R.id.textBody), withText(containsString("This is the body"))))
             .check(matches(isDisplayed()))
     }
-
 
 }

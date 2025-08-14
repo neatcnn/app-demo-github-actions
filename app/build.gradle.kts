@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.navigation.ui.ktx)
     implementation(libs.junit.ktx)
     implementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.espresso.intents)
     testImplementation(libs.junit)
     testImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
@@ -62,6 +63,9 @@ dependencies {
     androidTestImplementation ("androidx.test:runner:1.5.2")
     androidTestImplementation ("androidx.test:rules:1.5.0")
     testImplementation ("org.hamcrest:hamcrest-library:2.2")
+    testImplementation ("org.mockito:mockito-core:5.11.0")
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:5.2.1")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
 
 }
