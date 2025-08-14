@@ -61,7 +61,7 @@ jobs:
             adb wait-for-device
             boot_completed=""
             until [[ "$boot_completed" == "1" ]]; do
-              sleep 30
+              sleep 60
               boot_completed=$(adb shell getprop sys.boot_completed | tr -d '\r')
               echo "Waiting for emulator... boot_completed=$boot_completed"
             done
